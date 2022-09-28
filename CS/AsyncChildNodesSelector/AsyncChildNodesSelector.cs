@@ -8,7 +8,10 @@ namespace AsyncChildNodesSelector {
     public class CustomChildrenSelector : IAsyncChildNodesSelector {
         public Task<bool> HasChildNode(object item, CancellationToken token) {
             return Task.Run(async () => {
-                await Task.Delay(250);
+                for (int i = 0; i < 10; i++) {
+                    token.ThrowIfCancellationRequested();
+                    await Task.Delay(25);
+                }
                 return !(item is StageTask);
             });
         }
@@ -19,7 +22,10 @@ namespace AsyncChildNodesSelector {
 
         public Task<IEnumerable> SelectChildrenAsync(object item, CancellationToken token) {
             return Task.Run(async () => {
-                await Task.Delay(1000);
+                for (int i = 0; i < 10; i++) {
+                    token.ThrowIfCancellationRequested();
+                    await Task.Delay(100);
+                }
                 return SelectChildNodes(item);
             });
         }
