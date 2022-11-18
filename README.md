@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # WPF Tree List - Load Nodes Asynchronously Without Locking the Application's UI
 
-This example creates the [asynchronous child nodes selector](https://docs.devexpress.com/WPF/10366/controls-and-libraries/data-grid/display-hierarchical-data/bind-to-hierarchical-data-structure?v=22.2#fetch-nodes-asynchronously) and fetches child nodes in a background thread. During the fetch operation, parent nodes display a loading indicator and the [TreeListView](https://docs.devexpress.com/WPF/9759/controls-and-libraries/tree-list) remains responsive to user actions.
+This example creates the [asynchronous child nodes selector](https://docs.devexpress.com/WPF/10366/controls-and-libraries/data-grid/display-hierarchical-data/bind-to-hierarchical-data-structure?v=22.2#fetch-nodes-asynchronously) and fetches child nodes in a background thread. During the fetch operation, parent nodes display a loading indicator and the [TreeListView](https://docs.devexpress.com/WPF/9759/controls-and-libraries/tree-list) remains responsive to user actions. 
 
 ![TreeListView_Async_Loading](https://user-images.githubusercontent.com/65009440/192740394-1532369c-5069-4dfb-8192-2a7743929308.gif) 
 
